@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Interactive Map Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+This project is an **Interactive Web Dashboard** that integrates a map with predefined location markers and real-time weather data retrieval. Users can also search for a city, and the dashboard will automatically fetch and display its weather details.
 
-## Available Scripts
+## Technologies Used
+- **Frontend**: HTML, CSS, JavaScript, React.js
+- **Map Library**: Leaflet.js for rendering the interactive map
+- **Weather API**: OpenWeatherMap API to fetch real-time weather details
+- **Geolocation API**: OpenStreetMap Nominatim API for fetching coordinates of searched cities
 
-In the project directory, you can run:
+## Features Implemented
+### 1. Display an Interactive Map
+- Used **Leaflet.js** to render a dynamic map.
+- Added **predefined markers** for six cities (Chicago, Cuttack, Kanpur, Chandigarh, Bangalore, Pune).
+- Clicking on a marker displays weather information for that location.
 
-### `npm start`
+### 2. Responsive UI
+- Implemented **CSS Grid and Flexbox** for a smooth and adaptable layout.
+- The UI adjusts based on screen size for both **desktop and mobile** users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. Location Search Feature
+- Implemented a **search bar** that allows users to enter a city name.
+- Used OpenStreetMap’s **Nominatim API** to fetch the city’s coordinates.
+- Dynamically places a **custom marker** on the searched location.
+- Displays real-time **weather data** from OpenWeatherMap API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 4. Weather Data Integration
+- On selecting a location (either predefined or searched), the dashboard retrieves:
+  - Temperature (°C)
+  - Humidity (%)
+  - Weather Description
+  - Precipitation (if available)
+- Weather data is displayed dynamically in the **Stats Panel**.
 
-### `npm test`
+### 5. Differentiating Searched Location
+- Used a **custom marker icon** for the searched location, different from predefined markers.
+- Allows visual distinction between user-searched and preset locations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How It Works
+1. **Predefined Markers**: Users can click on any existing marker to fetch its weather data.
+2. **Search Functionality**:
+   - User enters a city name.
+   - The app fetches the latitude and longitude using OpenStreetMap’s API.
+   - A new marker is placed for that location with a distinct icon.
+   - Weather data is retrieved and displayed dynamically.
 
-### `npm run build`
+## Future Enhancements
+- Implementing additional weather parameters (e.g., wind speed, visibility).
+- Allowing users to add custom markers permanently.
+- Storing past searches for quick access.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project successfully integrates mapping, weather data retrieval, and search-based location tracking in an interactive web dashboard using **React.js and Leaflet.js**. 🚀
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
