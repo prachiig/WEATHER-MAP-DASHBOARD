@@ -33,9 +33,6 @@ This project is an **Interactive Web Dashboard** that integrates a map with pred
   - Precipitation (if available)
 - Weather data is displayed dynamically in the **Stats Panel**.
 
-### 5. Differentiating Searched Location
-- Used a **custom marker icon** for the searched location, different from predefined markers.
-- Allows visual distinction between user-searched and preset locations.
 
 ## How It Works
 1. **Predefined Markers**: Users can click on any existing marker to fetch its weather data.

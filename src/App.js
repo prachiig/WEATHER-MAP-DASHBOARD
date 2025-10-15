@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -25,7 +25,6 @@ const searchIcon = new L.Icon({
 
 
 const locations = [
-  
   { name: "Cuttack", coords: [20.4625, 85.8828] },
   { name: "Kanpur", coords: [26.4499, 80.3319] },
   { name: "Chandigarh", coords: [30.7333, 76.7794] },
@@ -89,6 +88,7 @@ const App = () => {
     fetchCoordinates(e.target.value);
   };
 
+
   return (
     <div className="app-container">
       <div className="search-bar-container">
@@ -129,6 +129,7 @@ const App = () => {
       <div className="stats-container">
         <h2>Statistics</h2>
         <p>Total Markers: {locations.length}</p>
+        <p>Marker Names: {locations.map(loc => loc.name).join(", ")}</p>
         {selectedLocation && (
           <div>
             <h3>Selected Location</h3>

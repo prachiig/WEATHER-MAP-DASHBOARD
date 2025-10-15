@@ -60,3 +60,8 @@
   }
 }
 
+@media screen and (min-width: 768px) { 
+  .stats-container {
+    margin-top: 20px; /* Adjust this value as needed */
+  }
+}
